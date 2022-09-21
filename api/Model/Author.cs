@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace api.Model
 {
@@ -11,6 +12,7 @@ namespace api.Model
         public string Name { get; set; }
 
         //Navigation properties
+        // [JsonIgnore]
         public ICollection<BlogPost> BlogPosts { get; set; }
     }
 }

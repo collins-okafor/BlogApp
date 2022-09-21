@@ -27,6 +27,7 @@ namespace api.Repo
         {
             var data = new BlogPost
             {
+                AuthorId = field.AuthorId,
                 Title = field.Title,
                 Body = field.Body
             };
@@ -53,21 +54,21 @@ namespace api.Repo
             return false;
         }
 
-        public async Task<IEnumerable<BlogPost>> GetBlogPosts()
+        public async Task<IEnumerable<BlogPost>> GetBlogPostsAll()
         {
-            var dataFromRepo = await context.BlogPosts.ToListAsync();
+            var dataFromRepo = await context.BlogPosts.OrderBy(bp => bp.Id).ToListAsync();
             return dataFromRepo;
         }
 
         public async Task<IEnumerable<object>> GetBlogPostWithId(int id)
         {
-            var dataFromRepo = await context.BlogPosts.Where(x=> x.Id == id).ToListAsync();
+            var dataFromRepo = await context.BlogPosts.Where(x => x.Id == id).ToListAsync();
             return dataFromRepo;
         }
 
         public async Task<IEnumerable<object>> GetBlogPostWithTitle(string title)
         {
-            var dataFromRepo = await context.BlogPosts.Where(x=> x.Title == title).ToListAsync();
+            var dataFromRepo = await context.BlogPosts.Where(x => x.Title == title).ToListAsync();
             return dataFromRepo;
         }
 
@@ -92,5 +93,6 @@ namespace api.Repo
 
             return data;
         }
+
     }
 }

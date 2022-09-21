@@ -18,6 +18,6 @@ namespace api.Repo.Interface
         Task<IEnumerable<object>> GetAuthorWithId(int id);
         Task<IEnumerable<object>> GetAuthorWithName(string name);
         Task <Author> UpdateAuthor(AuthorForUpdate model);
-         Task <bool> DeletePost(int id);
+         Task <bool> DeleteAuthor(int id);
     }
 }

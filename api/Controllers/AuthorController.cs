@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using api.Dto;
+using api.Repo;
 using api.Repo.Interface;
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
- 
+
 namespace api.Controllers
 {
     [ApiController]
     [Route("api/[Controller]")]
-    public class BlogPostController: ControllerBase
+    public class AuthorController: ControllerBase
     {
-        private readonly IBlogPostRepository blogPostRepository;
-        private readonly IMapper mapper;
+        private readonly IAuthorRepository authorRepository;
 
-        public BlogPostController(IBlogPostRepository blogPostRepository, IMapper mapper)
+        public AuthorController(IAuthorRepository authorRepository)
         {
-            this.blogPostRepository = blogPostRepository;
-            this.mapper = mapper;
-        }
+            this.authorRepository = authorRepository;
+        } 
 
         [HttpPost]
-        public async Task<IActionResult> AddBlogPost([FromBody]BlogPostForCreation field)
+        public async Task<IActionResult> AddBlogPost([FromBody]AuthorForCreation field)
         {
-            var dataFromRepo = await blogPostRepository.AddBlogPost(field);
+            var dataFromRepo = await authorRepository.AddAuthor(field);
             if(dataFromRepo == null)
             {
                 return BadRequest(new
@@ -47,9 +45,9 @@ namespace api.Controllers
 
         [HttpGet]
 
-        public async Task<ActionResult<BlogPostForGet>> getBlogPosts()
+        public async Task<IActionResult> getAuthors()
         {
-             var dataFromRepo = await blogPostRepository.GetBlogPostsAll();
+            var dataFromRepo = await authorRepository.GetAuthors();
             if(dataFromRepo == null)
             {
                 return BadRequest(new
@@ -65,15 +63,15 @@ namespace api.Controllers
                     Message = "Success",
                     StatusCode = 201,
                     IsSuccessful = true,
-                    Data = mapper.Map<ICollection<BlogPostForGet>>(dataFromRepo)
+                    Data = dataFromRepo
                 });
         }
 
         [HttpGet]
-        [Route("{id:int}")]
-        public async Task<ActionResult> getBlogPostWithId(int id)
+        [Route("{id}")]
+        public async Task<IActionResult> getAuthorById(int id)
         {
-            var dataFromRepo = await blogPostRepository.GetBlogPostWithId(id);
+            var dataFromRepo = await authorRepository.GetAuthorWithId(id);
             if(dataFromRepo == null)
             {
                 return BadRequest(new
@@ -93,37 +91,13 @@ namespace api.Controllers
                     Data = dataFromRepo
                 }
             );
-        } 
-
-        [HttpGet]
-        [Route("title")]
-        public async Task<ActionResult> GetBlogPostWithTitle(string title)
-        {
-            var dataFromRepo = await blogPostRepository.GetBlogPostWithTitle(title);
-            if(dataFromRepo == null)
-            {
-                return BadRequest(new
-                {
-                    Message = "Error",
-                    StatusCode = 401,
-                    IsSuccessful = false
-                });
-            }
-
-            return Ok(new
-                {
-                    Message = "Success",
-                    StatusCode = 201,
-                    IsSuccessful = true,
-                    Data = mapper.Map<ICollection<BlogPostForGet>>(dataFromRepo)
-                });
         }
 
         [HttpPost("update")]
-
-        public async Task<IActionResult> UpdateBlogPost(BlogPostForUpdate model)
-        { 
-            var dataFromRepo = await blogPostRepository.UpdateBlogPost(model);
+        
+        public async Task<IActionResult> updateAuthor([FromBody] AuthorForUpdate model)
+        {
+            var dataFromRepo = await authorRepository.UpdateAuthor(model);
             if(dataFromRepo == null)
             {
                 return BadRequest(new
@@ -139,15 +113,17 @@ namespace api.Controllers
                     Message = "Success",
                     StatusCode = 201,
                     IsSuccessful = true,
+                    AuthorId = model.Id,
                     Data = dataFromRepo
                 }
             );
-        }
+            
+        } 
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePost(int id)
+        public async Task<IActionResult> DeleteAuthor(int id)
         {
-            var dataFromRepo = await blogPostRepository.DeletePost(id);
+            var dataFromRepo = await authorRepository.DeleteAuthor(id);
             if(!ModelState.IsValid)
             {
                 return BadRequest(new
@@ -163,12 +139,11 @@ namespace api.Controllers
                     Message = "Success",
                     StatusCode = 201,
                     IsSuccessful = true,
-                    PostId = id,
+                    AuthorId = id,
                     Data = dataFromRepo
                 }
             );
+
         }
-
-
     }
 }

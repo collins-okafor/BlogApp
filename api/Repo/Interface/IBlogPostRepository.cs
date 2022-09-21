@@ -14,7 +14,7 @@ namespace api.Repo.Interface
         Task<bool> SaveAll();
 
         Task<BlogPost> AddBlogPost(BlogPostForCreation field);
-        Task<IEnumerable<BlogPost>> GetBlogPosts();
+        Task<IEnumerable<BlogPost>> GetBlogPostsAll();
         Task<IEnumerable<object>> GetBlogPostWithId(int id);
         Task<IEnumerable<object>> GetBlogPostWithTitle(string title);
         Task <BlogPost> UpdateBlogPost(BlogPostForUpdate model);

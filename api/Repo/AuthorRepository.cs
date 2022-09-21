@@ -23,7 +23,7 @@ namespace api.Repo
             dataContext.Add(entity);
         }
 
-        public async Task<Author> AddAuthor(AuthorForCreation field)
+         public async Task<Author> AddAuthor(AuthorForCreation field)
         {
             var Data = new Author
             {
@@ -40,7 +40,7 @@ namespace api.Repo
             dataContext.Remove(entity);
         }
 
-        public async Task<bool> DeletePost(int id)
+        public async Task<bool> DeleteAuthor(int id)
         {
             var dataFromRepo = await dataContext.Authors.FirstOrDefaultAsync(a => a.Id == id);
             if(dataFromRepo != null)
@@ -60,7 +60,7 @@ namespace api.Repo
 
         public async Task<IEnumerable<object>> GetAuthorWithId(int id)
         {
-            var dataFromRepo = await dataContext.Authors.Where(x=> x.Id == id).ToListAsync();
+            var dataFromRepo = await dataContext.Authors.Where(x=> x.Id == id).Include(x => x.BlogPosts).ToListAsync();
             return dataFromRepo;
         }
 
