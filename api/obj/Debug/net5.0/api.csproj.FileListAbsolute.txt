@@ -136,3 +136,7 @@ C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogAppCollz\api\bin\Debug\net5.0\Bog
 C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogAppCollz\api\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogAppCollz\api\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogAppCollz\api\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Bogus.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
