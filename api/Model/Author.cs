@@ -12,7 +12,7 @@ namespace api.Model
         public string Name { get; set; }
 
         //Navigation properties
-        // [JsonIgnore]
+        [JsonIgnore]
         public ICollection<BlogPost> BlogPosts { get; set; }
     }
 }
