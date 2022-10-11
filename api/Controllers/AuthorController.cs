@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 using api.Dto;
 using api.Repo;
 using api.Repo.Interface;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
     [ApiController]
     [Route("api/[Controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class AuthorController: ControllerBase
     {
         private readonly IAuthorRepository authorRepository;

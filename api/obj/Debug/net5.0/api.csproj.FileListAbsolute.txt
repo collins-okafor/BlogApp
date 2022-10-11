@@ -141,3 +141,14 @@ C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Newtonso
 C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Npgsql.dll
 C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\obj\Debug\net5.0\refint\api.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\api.StaticWebAssets.xml
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\ciO\Desktop\APPLAB\DotnetProjects\BlogApp\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.xml
