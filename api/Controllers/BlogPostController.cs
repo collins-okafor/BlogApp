@@ -49,8 +49,9 @@ namespace api.Controllers
                 });
         }
 
-        [HttpGet]
 
+        // [Authorize]
+        [HttpGet]
         public async Task<ActionResult<BlogPostForGet>> getBlogPosts()
         {
              var dataFromRepo = await blogPostRepository.GetBlogPostsAll();
@@ -73,6 +74,8 @@ namespace api.Controllers
                 });
         }
 
+
+        // [Authorize]
         [HttpGet]
         [Route("{id:int}")]
         public async Task<ActionResult> getBlogPostWithId(int id)

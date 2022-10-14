@@ -23,17 +23,17 @@ namespace api.Repo
             dataContext.Add(entity);
         }
 
-         public async Task<Author> AddAuthor(AuthorForCreation field)
-        {
-            var Data = new Author
-            {
-                Name = field.Name
-            };
+        //  public async Task<Author> AddAuthor(AuthorForCreation field)
+        // {
+        //     var Data = new Author
+        //     {
+        //         Name = field.Name
+        //     };
 
-            await dataContext.Authors.AddAsync(Data);
-            await SaveAll();
-            return Data;
-        }
+        //     await dataContext.Authors.AddAsync(Data);
+        //     await SaveAll();
+        //     return Data;
+        // }
 
         public void Delete<T>(T entity) where T : class
         {

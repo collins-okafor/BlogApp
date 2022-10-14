@@ -4,11 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using api.Model;
 using Bogus;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace api.Data
 {
-    public class DataContext: DbContext
+    public class DataContext: IdentityDbContext
     {
         public DataContext(DbContextOptions<DataContext> options): base(options)
         {
@@ -17,9 +18,12 @@ namespace api.Data
 
         public DbSet <BlogPost> BlogPosts { get; set; }
         public DbSet <Author> Authors { get; set; }
+        public DbSet <RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             var AuthorId = 1;
             var BlogPostId = 1;
 

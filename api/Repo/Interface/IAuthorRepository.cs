@@ -13,7 +13,7 @@ namespace api.Repo.Interface
         void Delete<T>(T entity) where T : class;
         Task<bool> SaveAll();
 
-        Task<Author> AddAuthor(AuthorForCreation field);
+        // Task<Author> AddAuthor(AuthorForCreation field);
         Task<IEnumerable<Author>> GetAuthors();
         Task<IEnumerable<object>> GetAuthorWithId(int id);
         Task<IEnumerable<object>> GetAuthorWithName(string name);

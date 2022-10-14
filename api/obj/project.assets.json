@@ -6600,11 +6600,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ciO\\Desktop\\APPLAB\\DotnetProjects\\BlogApp\\api\\api.csproj",
+      "projectUniqueName": "C:\\Users\\ciO\\Desktop\\APPLAB\\DotnetProjects\\New folder\\BlogApp\\api\\api.csproj",
       "projectName": "api",
-      "projectPath": "C:\\Users\\ciO\\Desktop\\APPLAB\\DotnetProjects\\BlogApp\\api\\api.csproj",
+      "projectPath": "C:\\Users\\ciO\\Desktop\\APPLAB\\DotnetProjects\\New folder\\BlogApp\\api\\api.csproj",
       "packagesPath": "C:\\Users\\ciO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ciO\\Desktop\\APPLAB\\DotnetProjects\\BlogApp\\api\\obj\\",
+      "outputPath": "C:\\Users\\ciO\\Desktop\\APPLAB\\DotnetProjects\\New folder\\BlogApp\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ciO\\AppData\\Roaming\\NuGet\\NuGet.Config",
